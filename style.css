@@ -1,0 +1,222 @@
+:root {
+  --primary: blue;
+  --shadow: -5px 5px 8px 5px grey;
+}
+
+.btn {
+  background: orange;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  float: right;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+.global {
+  background-color: orange;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.global > div {
+  display: flex;
+  justify-content: space-between;
+}
+/* ===========HEADER MENU====== */
+header {
+  background-color: blue;
+  color: white;
+}
+
+header div {
+  align-items: center;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  color: var(--primary);
+  font-weight: 700;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo > div {
+  border: 3px dotted var(--primary);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+  list-style-type: none;
+}
+header ul li {
+  margin-left: 16px;
+  border-radius: 15px;
+}
+header ul li:hover {
+  background-color: white;
+  cursor: pointer;
+  color: var(--primary);
+  transform: scale(1.5);
+}
+
+/* ------hero section -------- */
+.hero {
+  height: 60vh;
+  /* background-image: url(./img/pexels-christian-heitz-842711.jpg);
+  background-size: cover; */
+  background: red url(./img/pexels-christian-heitz-842711.jpg) center no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  background: rgba(37, 51, 35, 0.607);
+  color: white;
+  width: 400px;
+
+  padding: 32px;
+  border-radius: 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero-content hr {
+  width: 100%;
+}
+
+/* ---------------latest post --------- */
+.main {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.article {
+  background: rgb(248, 245, 245);
+  width: 65%;
+}
+
+article {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: -5px 5px 8px 5px grey;
+  border-radius: 10px;
+  padding: 20px 16px;
+  margin-top: 10px;
+}
+
+.art-img {
+  width: 350px;
+}
+
+article .title {
+  color: var(--primary);
+  font-weight: bolder;
+}
+
+.side-links {
+  background: rgb(253, 253, 254);
+  width: 35%;
+}
+
+.country {
+  background: greenyellow;
+  padding: 16px;
+  margin-bottom: 32px;
+  border-radius: 14px;
+}
+.date {
+  background: rgb(231, 234, 103);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+/* ---------footer----- */
+
+.footer {
+  background: black;
+  color: white;
+  padding: 64px;
+  text-align: center;
+  margin-top: 32px;
+}
+/* -----------recomendation------- */
+
+.recc {
+  background: rgb(248, 192, 88);
+
+  margin-top: 32px;
+  padding: 32px 0;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.card {
+  width: 350px;
+  box-shadow: var(--shadow);
+  background: white;
+  padding-bottom: 32px;
+  border-radius: 10px;
+}
+
+.card img {
+  border-radius: 10px 10px 0 0;
+}
+
+.card-btn {
+  background: orange;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.card-btn : :hover {
+}
+
+/* ---------form------- */
+
+subs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.subs input {
+  line-height: 42 px;
+  border-radius: 8px;
+  border: 1px solid grey;
+  padding: 5px 10px;
+}
