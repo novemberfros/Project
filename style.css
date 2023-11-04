@@ -1,15 +1,6 @@
 :root {
   --primary: blue;
-  --shadow: -5px 5px 8px 5px grey;
-}
-
-.btn {
-  background: orange;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 10px;
-  box-shadow: var(--shadow);
-  float: right;
+  --shadow: -5px 5px 10px 5px grey;
 }
 
 body {
@@ -20,15 +11,24 @@ body {
   width: 80%;
   margin: auto;
 }
-
 .flex-between {
   display: flex;
   justify-content: space-between;
 }
+
+.btn {
+  background: orange;
+  /* border: 1px solid orange; */
+  border: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  float: right;
+}
+
+/* ========== global  */
 .global {
-  background-color: orange;
-  display: flex;
-  justify-content: space-between;
+  background: rgb(255, 166, 0);
   padding: 10px 0;
 }
 
@@ -36,33 +36,36 @@ body {
   display: flex;
   justify-content: space-between;
 }
-/* ===========HEADER MENU====== */
+
+/* ============== Header menu  */
 header {
-  background-color: blue;
+  background: var(--primary);
   color: white;
+  padding: 10px 0;
 }
 
 header div {
   align-items: center;
 }
-
 .logo {
   width: 70px;
   height: 70px;
+  background: white;
   color: var(--primary);
-  font-weight: 700;
-  background-color: white;
+  font-weight: bolder;
   border-radius: 50%;
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.logo > div {
+.logo div {
   border: 3px dotted var(--primary);
   width: 60px;
   height: 60px;
   border-radius: 50%;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,66 +75,68 @@ header ul {
   display: flex;
   list-style-type: none;
 }
+
 header ul li {
   margin-left: 16px;
-  border-radius: 15px;
 }
+
 header ul li:hover {
-  background-color: white;
+  background: red;
   cursor: pointer;
-  color: var(--primary);
   transform: scale(1.5);
 }
 
-/* ------hero section -------- */
+/* ======== hero  */
 .hero {
   height: 60vh;
-  /* background-image: url(./img/pexels-christian-heitz-842711.jpg);
+  /* background-color: red;
+  background-image: url(./img/hero.jpg);
   background-size: cover; */
-  background: red url(./img/pexels-christian-heitz-842711.jpg) center no-repeat;
+  background: red url(./img/pexels-christian-heitz-842711.jpg) no-repeat center;
   background-size: cover;
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .hero-content {
-  background: rgba(37, 51, 35, 0.607);
+  background: rgba(0, 0, 0, 0.709);
   color: white;
   width: 400px;
 
   padding: 32px;
-  border-radius: 15px;
+  border-radius: 10px;
 
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
 }
 
 .hero-content hr {
   width: 100%;
 }
 
-/* ---------------latest post --------- */
+/* ============= latest post  */
 .main {
   display: flex;
   justify-content: space-between;
-  gap: 10px;
+  gap: 16px;
 }
-.article {
-  background: rgb(248, 245, 245);
-  width: 65%;
+
+.articles {
+  width: 66%;
 }
 
 article {
   display: flex;
   justify-content: space-between;
   gap: 16px;
-  box-shadow: -5px 5px 8px 5px grey;
+  box-shadow: var(--shadow);
   border-radius: 10px;
   padding: 20px 16px;
-  margin-top: 10px;
+  margin-top: 24px;
 }
 
 .art-img {
@@ -141,27 +146,26 @@ article {
 article .title {
   color: var(--primary);
   font-weight: bolder;
+  font-size: 24px;
 }
 
 .side-links {
-  background: rgb(253, 253, 254);
-  width: 35%;
+  width: 34%;
 }
 
 .country {
-  background: greenyellow;
+  background: rgba(153, 205, 50, 0.625);
   padding: 16px;
   margin-bottom: 32px;
-  border-radius: 14px;
+  border-radius: 10px;
 }
+
 .date {
-  background: rgb(231, 234, 103);
-  border-radius: 14px;
+  background: rgba(255, 255, 0, 0.484);
   padding: 16px;
+  border-radius: 10px;
 }
-
-/* ---------footer----- */
-
+/* ========== footer  */
 .footer {
   background: black;
   color: white;
@@ -169,10 +173,10 @@ article .title {
   text-align: center;
   margin-top: 32px;
 }
-/* -----------recomendation------- */
 
+/* ====== recc */
 .recc {
-  background: rgb(248, 192, 88);
+  background: rgba(255, 251, 0, 0.587);
 
   margin-top: 32px;
   padding: 32px 0;
@@ -182,6 +186,7 @@ article .title {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
+  justify-content: space-around;
 }
 
 .card {
@@ -189,7 +194,9 @@ article .title {
   box-shadow: var(--shadow);
   background: white;
   padding-bottom: 32px;
+
   border-radius: 10px;
+  flex-grow: 1;
 }
 
 .card img {
@@ -197,26 +204,116 @@ article .title {
 }
 
 .card-btn {
-  background: orange;
+  background: orangered;
   width: 100%;
   padding: 10px 0;
+  border: none;
   border-radius: 10px;
   box-shadow: var(--shadow);
 }
 
-.card-btn : :hover {
+.btn:hover,
+.card-btn:hover {
+  cursor: pointer;
 }
 
-/* ---------form------- */
-
-subs {
+/* ========= sub  */
+.subs {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .subs input {
-  line-height: 42 px;
+  line-height: 42px;
   border-radius: 8px;
   border: 1px solid grey;
   padding: 5px 10px;
+}
+
+/* ==========media queries========= */
+
+/* 0-600px = mobile */
+/* @media (max-width: 600px) {
+  .global {
+    background: rgb(198, 160, 89);
+    /* display: none; */
+
+/* large monitor or TV 992px + >
+@media (min-width: 992px) {
+  header {
+    background: rgb(55, 255, 0);
+  }
+} */
+
+/* @media (600px < width < 992px) {
+  header {
+    background: rgb(255, 0, 217);
+  }
+} */
+
+/* @media (max-width: 920px) {
+  .global {
+    background: rgb(248, 235, 3);
+    display: none;
+  }
+} */
+
+/* 600-900px for ipads */
+
+@media (max-width: 992px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .articles {
+    width: 100%;
+  }
+
+  .side-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 50px;
+  }
+
+  .country,
+  .date {
+    flex-grow: 1;
+  }
+
+  .country {
+    margin-bottom: 0;
+  }
+}
+
+/* 600 - mobile screen  */
+@media (max-width: 600px) {
+  .articles article {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .art-img {
+    width: 100%;
+  }
+
+  .side-links {
+    flex-direction: column;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form input {
+    margin-top: 5px;
+  }
+
+  .forms input:last-child {
+    background-color: red;
+    color: white;
+  }
 }
